@@ -3,6 +3,8 @@ USS Berners-Lee Angular site
 
 # Deployment
 ```bash
+$ sudo bash ./bin/generate-le-cert.sh
+# update Amazon DNS settings
 $ npm run build
 $ sudo bash ./bin/generate-le-cert.sh
 $ sudo bash ./bin/docker-build.sh
