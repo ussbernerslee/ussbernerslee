@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LETSENCRYPT_EMAIL="dylan@deepdivedylan.io"
-DNSNAME="ussbernerslee.com"
+DNSNAME="www.ussbernerslee.com"
 
 docker run -it --rm --name certbot \
 	-v "$PWD/letsencrypt:/etc/letsencrypt" \
@@ -15,5 +15,5 @@ docker run -it --rm --name certbot \
 	--manual-public-ip-logging-ok \
 	--keep-until-expiring \
 	--agree-tos \
-	-d "www.$DNSNAME" \
+	-d "$DNSNAME" \
 --server https://acme-v02.api.letsencrypt.org/directory
