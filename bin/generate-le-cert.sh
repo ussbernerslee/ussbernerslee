@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LETSENCRYPT_EMAIL="dylan@deepdivedylan.io"
-DNSNAME="ussbernerslee.com"
+DNSNAME="www.ussbernerslee.com"
 
 docker run -it --rm --name certbot \
 	-v "$PWD/letsencrypt:/etc/letsencrypt" \
