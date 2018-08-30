@@ -5,8 +5,7 @@ version="1.0.0"
 app_name="USS Berners-Lee"
 
 # aws credentials
-access_key=YOUR_KEY
-access_secret=YOUR_SECRET
+source ./aws-keys.sh
 
 # values
 timestamp=$(date +%s)
