@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # application details
-version="1.0.0"
-app_name="USS Berners-Lee"
+version="latest"
+app_name="ussbernerslee"
 
 # aws credentials
 source ./aws-keys.sh
