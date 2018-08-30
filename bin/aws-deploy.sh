@@ -5,7 +5,7 @@ version="latest"
 app_name="ussbernerslee"
 
 # aws credentials
-source ./aws-keys.sh
+source ./bin/aws-keys.sh
 
 # values
 timestamp=$(date +%s)
