@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:mainline-alpine
 COPY public_html /usr/share/nginx/html
 
 RUN mkdir /etc/letsencrypt
