@@ -4,9 +4,6 @@
 version="latest"
 app_name="ussbernerslee"
 
-# aws credentials
-source ./bin/aws-keys.sh
-
 # values
 timestamp=$(date +%s)
 
@@ -16,9 +13,9 @@ eval $(docker-machine env -u)
 # Create machine on aws
 docker-machine create \
 	--driver amazonec2 \
-	--amazonec2-access-key $access_key \
-	--amazonec2-secret-key $access_secret \
-	--amazonec2-region us-west-2 \
+	--amazonec2-access-key $(aws configure get aws_access_key_id) \
+	--amazonec2-secret-key $(aws configure get aws_secret_access_key) \
+	--amazonec2-region $(aws configure get region) \
 	--amazonec2-open-port 80 \
 	--amazonec2-open-port 443 \
 $app_name-instance-$timestamp
