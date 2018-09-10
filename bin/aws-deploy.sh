@@ -18,6 +18,7 @@ docker-machine create \
 	--driver amazonec2 \
 	--amazonec2-access-key $access_key \
 	--amazonec2-secret-key $access_secret \
+	--amazonec2-region us-west-2 \
 	--amazonec2-open-port 80 \
 	--amazonec2-open-port 443 \
 $app_name-instance-$timestamp
